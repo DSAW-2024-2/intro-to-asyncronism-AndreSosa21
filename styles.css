@@ -11,12 +11,27 @@ body{
 
 
 }
+:root{
+    --cave-bg-color:rgba(99, 105, 105, 0.627);
+    --forest-bg-color:rgba(5, 68, 16, 0.627);
+    --grassland-bg-color:rgba(172, 226, 25, 0.627);
+    --mountain-bg-color:rgba(170, 94, 53, 0.627);
+    --rare-bg-color:rgba(13, 17, 17, 0.945);
+    --rough-bg-color:rgba(200, 89, 25, 0.845);
+    --sea-bg-color:rgba(41, 241, 241, 0.937);
+    --urban-bg-color:rgba(168, 110, 249, 0.627);
+    --waters-bg-color:rgba(13, 98, 225, 0.627);
+    --all-bg-color:rgba(253, 255, 255, 0.977);
+
+}
 @font-face {
     font-family: 'Pokemon Solid';
     src: url('Pokemon Solid.ttf') format('truetype');
 }
 
 .pokedex__title-container{
+    position: fixed;
+    top: 0;
     height: 15%;
     width: 30%;
     background-color: black;
@@ -29,7 +44,15 @@ body{
     align-items: center;
 
 }
+.nav_habitat{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top:20%;
+
+}
 .pokedex__title{
+    
     font-family: Pokemon Solid ,serif;
     font-weight:lighter;
     color: #FAFA00;
@@ -43,11 +66,36 @@ body{
         3px 3px 0 #002E99;
     
 }
+
+ul{
+    list-style-type: none;
+}
+li button{
+    background-color: transparent;
+    border: 0;
+    padding: .8rem;
+    border-radius: 100vmax;
+    cursor:pointer;
+    font-family: Rubik;
+    font-size:large;
+    font-weight:bolder;
+    box-shadow: 0 0 .5rem rgb(215, 215, 215);
+}
+li button:hover{
+    transform: scale(1.1);
+}
+.nav_list{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
 .pokedex__pokeballs-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
-    margin-top: 40px;
+    margin-top: 300px;
     width: 95%;
     overflow-y: auto;
     max-height: 100vh;
@@ -74,7 +122,7 @@ body{
 
     }
     .pokeball__top {
-        background-color: rgb(193, 28, 28); 
+        
         border-top-left-radius: 50% 100%;
         border-top-right-radius: 50% 100%;
         
@@ -97,6 +145,8 @@ body{
         width: 100%;
         height: 30px;
         background-color: black;
+        box-shadow: 0px 10px 15px rgba(83, 90, 90, 0.911), 
+                0px 4px 6px rgba(0, 0, 0, 0.3);
         
     }
     .pokeball__center{
@@ -114,6 +164,7 @@ body{
         border-color: black;
         border-style: inherit;
         border-width: 15px;
+        
     }
 
 }
@@ -137,3 +188,44 @@ body{
     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5), 
     0 0 5px rgba(255, 255, 255, 0.8);
 }
+.pokedex__btn-all{
+    background-color: var(--all-bg-color);
+}
+.pokeball__top--cave, .pokedex__btn-cave{
+    background-color: var(--cave-bg-color);
+
+}
+.pokeball__top--forest, .pokedex__btn-forest{
+    background-color: var(--forest-bg-color);
+
+}
+.pokeball__top--grassland, .pokedex__btn-grassland{
+    background-color: var(--grassland-bg-color);
+
+}
+.pokeball__top--mountain, .pokedex__btn-mountain{
+    background-color: var(--mountain-bg-color);
+
+}
+.pokeball__top--rare, .pokedex_btn-rare{
+    background-color: var(--rare-bg-color);
+
+}
+.pokeball__top--rough_terrain, .pokedex__btn-rough{
+    background-color: var(--rough-bg-color);
+
+}
+.pokeball__top--sea, .pokedex__btn-sea{
+    background-color: var(--sea-bg-color);
+
+}
+.pokeball__top--urban, .pokedex__btn-urban{
+    background-color: var(--urban-bg-color);
+
+}
+.pokeball__top--waters-edge, .pokedex__btn-waters-edge{
+    background-color: var(--waters-bg-color);
+
+}
+
+
