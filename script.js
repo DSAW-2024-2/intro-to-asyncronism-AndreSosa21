@@ -1,5 +1,8 @@
 const pokemon = document.querySelector('#poke');
-const buttonHabitat = document.querySelectorAll('.pokedex__btn')
+const buttonHabitat = document.querySelectorAll('.pokedex__btn');
+const pokeInfo = document.querySelector('#info');
+
+
 let Api="https://pokeapi.co/api/v2/pokemon/";
 for (let i=1; i<= 151; i++){
     fetch(Api + i)
@@ -24,6 +27,11 @@ function showPokemon_inPokeball(data,habitatData){
             </button>
         </div>
     `;
+    const pokeImage = div.querySelector('.pokeball__pokemons-image');
+    pokeImage.addEventListener('click', (event) => {
+        show_pokeInfo(event.target, data, habitatData);
+    });
+    
     pokemon.append(div);
 }
 
@@ -72,7 +80,36 @@ buttonHabitat.forEach(boton => boton.addEventListener("click", (event) => {
             })        
     }
 })) 
-//falta tarjeta personalizada con:
+
+
+function show_pokeInfo(target,data,habitat){
+    const div2 = document.createElement("div");
+    pokeInfo.classList.add("pokedex__pokemon-info");
+
+    pokeInfo.innerHTML = '';
+    let types = data.types.map(type =>
+        `<li>${type.type.name} </li>`
+        );
+    types = types.join('');   
     
+    
+    div2.innerHTML = `
+            <h2>Pokemon Info ${data.name}</h2>
+                <ul>
+                    <li>Type: ${types}</li>
+                    <li>Weight: ${data.weight}</li>
+                    <li>Habitat: ${habitat}</li>
+                    
+                </ul>
+    `;
+    
+    
+    
+    pokeInfo.append(div2);
+    pokeInfo.style.display="block";
+
+
+
+} 
 
 

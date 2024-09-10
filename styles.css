@@ -227,5 +227,45 @@ li button:hover{
     background-color: var(--waters-bg-color);
 
 }
+.pokedex__pokemon-info{
+    
+    display: none;
+    width: 200px;
+    height: max-content;
+    background: rgba(98, 96, 98, 0.575);
+    border-width: 5px;
+    border-color:rgb(241, 241, 244) ;
+    border-style: solid;
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px rgb(230, 230, 234) ;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.pokedex__pokemon-info li{
+    font-family: Arial,sans-serif;
+    padding:auto;
+    color:azure;
+    text-shadow: 2px 2px 20px rgb(112, 121, 121);
+    border-bottom: 1px solid rgba(241, 241, 244, 0.5);
+}
+.pokedex__pokemon-info h2{
+    font-family: 'Rubik';
+    color: #FAFA00;
+    font-size:larger;
+}
+.pokedex__pokemon-info ul{
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 50%;
+    font-size: larger;
+    gap: 20px;
+
+}
+
+
 
 
