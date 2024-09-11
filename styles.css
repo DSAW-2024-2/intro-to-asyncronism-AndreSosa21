@@ -102,7 +102,13 @@ li button:hover{
     background-color: rgb(59, 57, 57);
     box-shadow: 2px 2px 20px rgb(112, 121, 121);
     border-radius: 10px;
+    padding-top: 10rem;
 
+}
+.pokedex__pokeball:hover{
+    transform: translateY(-70%); /* Posicionar por debajo inicialmente */
+    transition: transform 0.6s ease-out, opacity 0.3s ease-out; 
+    
 }
 .pokedex__pokeballs{
     
@@ -114,8 +120,9 @@ li button:hover{
     position: relative;
     height: 250px;
     width: 250px;
-    margin-top: 10rem;
+    margin-bottom: 10rem;
     box-shadow: 20px 20px 30px rgb(27, 26, 26);
+    transition: margin-bottom 0.3s ease;
     .pokeball__top,.pokeball__botton{
         height: 50%;
         width: auto;
@@ -167,6 +174,9 @@ li button:hover{
         
     }
 
+}
+.pokedex__pokeballs.move-down {
+    margin-bottom: 200px;
 }
 .pokeball__pokemons-image{
     width: 100px;
@@ -229,7 +239,6 @@ li button:hover{
 }
 .pokedex__pokemon-info{
     
-    display: none;
     width: 200px;
     height: max-content;
     background: rgba(98, 96, 98, 0.575);
@@ -264,6 +273,24 @@ li button:hover{
     font-size: larger;
     gap: 20px;
 
+}
+.pokeball__info-container{
+    transform: translateY(20px); /* Posicionar por debajo inicialmente */
+    opacity: 0; /* Hacerla invisible al principio */
+    transition: transform 0.6s ease-out, opacity 0.3s ease-out; 
+    display: none;
+}
+.pokeball__info-container.visible{
+    display: block; /* Mostrar cuando es visible */
+    transform: translateY(-70%); /* Desplazar a su posición original */
+    opacity: 1;
+    background-color: rgba(98, 96, 98, 1);
+}
+.pokeball__center {
+    margin-bottom: 20px; /* Agregamos un margen inferior a la pokebola */
+}
+.buttons{
+    font-family: Rubik;
 }
 
 
