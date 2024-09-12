@@ -2,6 +2,9 @@
 # Desarrollo de Aplicaciones Web
 ## Introducción al Asíncronismo
 ## pokedex final: Andrea Julieth Sosa Rodriguez
+## endpoint 1- pokemons
+## endpoint 2-species-habitat
+## endpoint 3-encounter-method 
  https://dsaw-2024-2.github.io/intro-to-asyncronism-AndreSosa21/
 
 
