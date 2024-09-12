@@ -13,8 +13,6 @@ body{
     
 }
 
-
-
 :root{
     --cave-bg-color:rgba(99, 105, 105, 0.627);
     --forest-bg-color:rgba(5, 68, 16, 0.627);
@@ -264,7 +262,6 @@ li button:hover{
     margin-bottom: 5px;
 }
 .pokedex__pokemon-info h2{
-     /* Ajuste del título */
     font-family: Pokemon Solid ,serif;
     color: #FAFA00;
     text-shadow: 
@@ -298,10 +295,7 @@ li button:hover{
 .pokeball__info-container.visible{
     display: block; 
     transform: translateY(-75%); 
-    
-    
     opacity: 1;
-    
 }
 .pokeball__center {
     margin-bottom: 20px; 
@@ -371,10 +365,7 @@ li button:hover{
     }
     .pokedex__pokemon-info li{
         font-size: smaller;
-    }
-
-
-    
+    }   
 }
 @media screen and (max-width: 432px) {
     .pokedex__pokeballs-container{
@@ -404,5 +395,4 @@ li button:hover{
         overflow-y: auto;
     }
 
-    
 }
